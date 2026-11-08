@@ -1,0 +1,413 @@
+{
+  "strategies": "both",
+  "iv_rule": "VXN <= 过去 252 个交易日 VXN 的 10 分位",
+  "start": "2021-11-08",
+  "end": "2026-11-06",
+  "config": "策略一 + 策略二｜初始资金 $200,000，策略一 Δ=0.2/7天 IV条件 VXN≤近252日10分位，策略二 10张 Δ=0.6/365天 跌幅>1%，Roll: Delta<0.50→0.60/365天(基本面OK)",
+  "strategy_metrics": {
+    "total_return": 1.0425151379270399,
+    "cagr": 0.15419768910270215,
+    "vol": 0.14138841992655837,
+    "sharpe": 0.9445258344252344,
+    "max_drawdown": 0.1675567815563732,
+    "max_dd_start": 423.0,
+    "max_dd_end": 494.0,
+    "calmar": 0.9202712517536838,
+    "win_rate_daily": 0.4218500797448166,
+    "n_days": 1255.0,
+    "final_equity": 408503.02758540795
+  },
+  "benchmark_metrics": {
+    "total_return": 0.6482439833190976,
+    "cagr": 0.10554703791287712,
+    "vol": 0.23288567529563803,
+    "sharpe": 0.4616475561045753,
+    "max_drawdown": 0.3561721824797643,
+    "max_dd_start": 9.0,
+    "max_dd_end": 286.0,
+    "calmar": 0.29633711756496794,
+    "win_rate_daily": 0.5382775119617225,
+    "n_days": 1255.0,
+    "final_equity": 329648.7966638195
+  },
+  "cc": {
+    "cond1_days": 132,
+    "cond3_days": 217,
+    "candidate_days": 26,
+    "triggered_days": 20,
+    "triggered_dates": [
+      "2023-01-12",
+      "2023-01-13",
+      "2023-01-17",
+      "2023-01-26",
+      "2023-01-27",
+      "2023-02-01",
+      "2023-02-02",
+      "2023-02-06",
+      "2023-02-07",
+      "2023-04-04",
+      "2023-05-31",
+      "2023-06-01",
+      "2023-06-02",
+      "2023-06-14",
+      "2023-06-15",
+      "2023-07-17",
+      "2023-07-18",
+      "2023-11-16",
+      "2023-12-13",
+      "2024-01-24"
+    ],
+    "opened": 10
+  },
+  "lc": {
+    "triggered_dates": [
+      "2023-01-18",
+      "2023-01-30",
+      "2023-02-03",
+      "2023-02-08",
+      "2023-02-16",
+      "2023-02-21",
+      "2023-02-24",
+      "2023-03-07",
+      "2023-03-09",
+      "2023-03-10",
+      "2023-03-22",
+      "2023-04-25",
+      "2023-06-07",
+      "2023-06-21",
+      "2023-06-26",
+      "2023-07-20",
+      "2023-08-02",
+      "2023-08-09",
+      "2023-08-15",
+      "2023-08-16",
+      "2023-08-17",
+      "2023-08-24",
+      "2023-09-12",
+      "2023-09-15",
+      "2024-01-31",
+      "2024-02-13",
+      "2024-08-01"
+    ],
+    "opened": 2,
+    "contracts_per_entry": 10
+  },
+  "roll": {
+    "enabled": true,
+    "delta_trigger": 0.5,
+    "target_delta": 0.6,
+    "n_rolls": 0,
+    "events": [],
+    "n_fundamental_checks": 0,
+    "fundamental_decisions": {}
+  },
+  "agent_calls": 26,
+  "agent_news_days": 0,
+  "agent_proxy_days": 26,
+  "agent_verdicts": [
+    {
+      "as_of": "2023-01-12",
+      "has_resistance": true,
+      "human_caused": false,
+      "verdict": "TECHNICAL_RESISTANCE",
+      "evidence": [
+        "现价距 60 日高点 293.72 尚有 5.3%，上方存在前期密集成交/套牢区阻力"
+      ],
+      "reasoning": "新闻无明确信号，改用价格结构代理判定：前期套牢区。",
+      "source": "price-structure",
+      "headlines": []
+    },
+    {
+      "as_of": "2023-01-13",
+      "has_resistance": true,
+      "human_caused": false,
+      "verdict": "TECHNICAL_RESISTANCE",
+      "evidence": [
+        "现价距 60 日高点 293.72 尚有 4.5%，上方存在前期密集成交/套牢区阻力"
+      ],
+      "reasoning": "新闻无明确信号，改用价格结构代理判定：前期套牢区。",
+      "source": "price-structure",
+      "headlines": []
+    },
+    {
+      "as_of": "2023-01-17",
+      "has_resistance": true,
+      "human_caused": false,
+      "verdict": "TECHNICAL_RESISTANCE",
+      "evidence": [
+        "现价距 60 日高点 293.72 尚有 4.3%，上方存在前期密集成交/套牢区阻力"
+      ],
+      "reasoning": "新闻无明确信号，改用价格结构代理判定：前期套牢区。",
+      "source": "price-structure",
+      "headlines": []
+    },
+    {
+      "as_of": "2023-01-26",
+      "has_resistance": true,
+      "human_caused": false,
+      "verdict": "TECHNICAL_RESISTANCE",
+      "evidence": [
+        "RSI(14)=83.8 处于超买区"
+      ],
+      "reasoning": "新闻无明确信号，改用价格结构代理判定：超买。",
+      "source": "price-structure",
+      "headlines": []
+    },
+    {
+      "as_of": "2023-01-27",
+      "has_resistance": true,
+      "human_caused": false,
+      "verdict": "TECHNICAL_RESISTANCE",
+      "evidence": [
+        "RSI(14)=82.2 处于超买区"
+      ],
+      "reasoning": "新闻无明确信号，改用价格结构代理判定：超买。",
+      "source": "price-structure",
+      "headlines": []
+    },
+    {
+      "as_of": "2023-02-01",
+      "has_resistance": true,
+      "human_caused": false,
+      "verdict": "TECHNICAL_RESISTANCE",
+      "evidence": [
+        "RSI(14)=73.1 处于超买区"
+      ],
+      "reasoning": "新闻无明确信号，改用价格结构代理判定：超买。",
+      "source": "price-structure",
+      "headlines": []
+    },
+    {
+      "as_of": "2023-02-02",
+      "has_resistance": true,
+      "human_caused": false,
+      "verdict": "TECHNICAL_RESISTANCE",
+      "evidence": [
+        "RSI(14)=77.3 处于超买区"
+      ],
+      "reasoning": "新闻无明确信号，改用价格结构代理判定：超买。",
+      "source": "price-structure",
+      "headlines": []
+    },
+    {
+      "as_of": "2023-02-06",
+      "has_resistance": true,
+      "human_caused": false,
+      "verdict": "TECHNICAL_RESISTANCE",
+      "evidence": [
+        "5日冲高 4.6% 但近3日仅 0.9%，涨势停顿/滞涨"
+      ],
+      "reasoning": "新闻无明确信号，改用价格结构代理判定：冲高滞涨。",
+      "source": "price-structure",
+      "headlines": []
+    },
+    {
+      "as_of": "2023-02-07",
+      "has_resistance": true,
+      "human_caused": false,
+      "verdict": "TECHNICAL_RESISTANCE",
+      "evidence": [
+        "RSI(14)=73.5 处于超买区",
+        "5日冲高 5.2% 但近3日仅 -0.6%，涨势停顿/滞涨"
+      ],
+      "reasoning": "新闻无明确信号，改用价格结构代理判定：超买、冲高滞涨。",
+      "source": "price-structure",
+      "headlines": []
+    },
+    {
+      "as_of": "2023-04-04",
+      "has_resistance": true,
+      "human_caused": false,
+      "verdict": "TECHNICAL_RESISTANCE",
+      "evidence": [
+        "RSI(14)=73.6 处于超买区"
+      ],
+      "reasoning": "新闻无明确信号，改用价格结构代理判定：超买。",
+      "source": "price-structure",
+      "headlines": []
+    },
+    {
+      "as_of": "2023-05-31",
+      "has_resistance": true,
+      "human_caused": false,
+      "verdict": "TECHNICAL_RESISTANCE",
+      "evidence": [
+        "RSI(14)=76.8 处于超买区"
+      ],
+      "reasoning": "新闻无明确信号，改用价格结构代理判定：超买。",
+      "source": "price-structure",
+      "headlines": []
+    },
+    {
+      "as_of": "2023-06-01",
+      "has_resistance": true,
+      "human_caused": false,
+      "verdict": "TECHNICAL_RESISTANCE",
+      "evidence": [
+        "RSI(14)=78.3 处于超买区"
+      ],
+      "reasoning": "新闻无明确信号，改用价格结构代理判定：超买。",
+      "source": "price-structure",
+      "headlines": []
+    },
+    {
+      "as_of": "2023-06-02",
+      "has_resistance": true,
+      "human_caused": false,
+      "verdict": "TECHNICAL_RESISTANCE",
+      "evidence": [
+        "RSI(14)=81.4 处于超买区"
+      ],
+      "reasoning": "新闻无明确信号，改用价格结构代理判定：超买。",
+      "source": "price-structure",
+      "headlines": []
+    },
+    {
+      "as_of": "2023-06-14",
+      "has_resistance": true,
+      "human_caused": false,
+      "verdict": "TECHNICAL_RESISTANCE",
+      "evidence": [
+        "RSI(14)=84.0 处于超买区"
+      ],
+      "reasoning": "新闻无明确信号，改用价格结构代理判定：超买。",
+      "source": "price-structure",
+      "headlines": []
+    },
+    {
+      "as_of": "2023-06-15",
+      "has_resistance": true,
+      "human_caused": false,
+      "verdict": "TECHNICAL_RESISTANCE",
+      "evidence": [
+        "RSI(14)=82.7 处于超买区"
+      ],
+      "reasoning": "新闻无明确信号，改用价格结构代理判定：超买。",
+      "source": "price-structure",
+      "headlines": []
+    },
+    {
+      "as_of": "2023-07-17",
+      "has_resistance": true,
+      "human_caused": false,
+      "verdict": "TECHNICAL_RESISTANCE",
+      "evidence": [
+        "RSI(14)=86.0 处于超买区"
+      ],
+      "reasoning": "新闻无明确信号，改用价格结构代理判定：超买。",
+      "source": "price-structure",
+      "headlines": []
+    },
+    {
+      "as_of": "2023-07-18",
+      "has_resistance": true,
+      "human_caused": false,
+      "verdict": "TECHNICAL_RESISTANCE",
+      "evidence": [
+        "RSI(14)=84.6 处于超买区"
+      ],
+      "reasoning": "新闻无明确信号，改用价格结构代理判定：超买。",
+      "source": "price-structure",
+      "headlines": []
+    },
+    {
+      "as_of": "2023-08-31",
+      "has_resistance": false,
+      "human_caused": false,
+      "verdict": "NO_RESISTANCE",
+      "evidence": [],
+      "reasoning": "新闻与价格结构均未显示短期技术阻力。",
+      "source": "price-structure",
+      "headlines": []
+    },
+    {
+      "as_of": "2023-11-03",
+      "has_resistance": false,
+      "human_caused": false,
+      "verdict": "NO_RESISTANCE",
+      "evidence": [],
+      "reasoning": "新闻与价格结构均未显示短期技术阻力。",
+      "source": "price-structure",
+      "headlines": []
+    },
+    {
+      "as_of": "2023-11-06",
+      "has_resistance": false,
+      "human_caused": false,
+      "verdict": "NO_RESISTANCE",
+      "evidence": [],
+      "reasoning": "新闻与价格结构均未显示短期技术阻力。",
+      "source": "price-structure",
+      "headlines": []
+    },
+    {
+      "as_of": "2023-11-07",
+      "has_resistance": false,
+      "human_caused": false,
+      "verdict": "NO_RESISTANCE",
+      "evidence": [],
+      "reasoning": "新闻与价格结构均未显示短期技术阻力。",
+      "source": "price-structure",
+      "headlines": []
+    },
+    {
+      "as_of": "2023-11-08",
+      "has_resistance": false,
+      "human_caused": false,
+      "verdict": "NO_RESISTANCE",
+      "evidence": [],
+      "reasoning": "新闻与价格结构均未显示短期技术阻力。",
+      "source": "price-structure",
+      "headlines": []
+    },
+    {
+      "as_of": "2023-11-16",
+      "has_resistance": true,
+      "human_caused": false,
+      "verdict": "TECHNICAL_RESISTANCE",
+      "evidence": [
+        "RSI(14)=91.7 处于超买区"
+      ],
+      "reasoning": "新闻无明确信号，改用价格结构代理判定：超买。",
+      "source": "price-structure",
+      "headlines": []
+    },
+    {
+      "as_of": "2023-12-13",
+      "has_resistance": true,
+      "human_caused": false,
+      "verdict": "TECHNICAL_RESISTANCE",
+      "evidence": [
+        "RSI(14)=72.9 处于超买区"
+      ],
+      "reasoning": "新闻无明确信号，改用价格结构代理判定：超买。",
+      "source": "price-structure",
+      "headlines": []
+    },
+    {
+      "as_of": "2024-01-24",
+      "has_resistance": true,
+      "human_caused": false,
+      "verdict": "TECHNICAL_RESISTANCE",
+      "evidence": [
+        "RSI(14)=87.9 处于超买区"
+      ],
+      "reasoning": "新闻无明确信号，改用价格结构代理判定：超买。",
+      "source": "price-structure",
+      "headlines": []
+    },
+    {
+      "as_of": "2025-12-24",
+      "has_resistance": false,
+      "human_caused": false,
+      "verdict": "NO_RESISTANCE",
+      "evidence": [],
+      "reasoning": "新闻与价格结构均未显示短期技术阻力。",
+      "source": "price-structure",
+      "headlines": []
+    }
+  ],
+  "n_trades": 24,
+  "n_events": 25,
+  "report": "/Users/bule/learn/deepseekharness_test/qqq_options/report/output/backtest_both.html"
+}
